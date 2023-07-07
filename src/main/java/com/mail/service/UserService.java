@@ -9,14 +9,12 @@ import com.mail.dao.UserDao;
 import com.mail.exception.UserNotFoundException;
 
 public class UserService {
-
 	
-	public boolean loginAuth(String email, String password) {
+	
+	public User loginAuth(String email, String password) {
 		
-		//DB login
 		
-		
-		return false;
+		return null;
 	}
 	
 	
@@ -48,10 +46,15 @@ public class UserService {
 		}
 	}
 	
+	
+	
+	
+	
 	public void markImpMail(int mailId) {
 		UserDao userDao = new UserDao();
 		Mail mail =(Mail) userDao.findUserById(Mail.class, mailId);
 		mail.setImportant(true);
+		userDao.save(mail);
 		
 	}
 	

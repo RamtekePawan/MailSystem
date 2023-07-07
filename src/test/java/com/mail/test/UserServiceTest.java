@@ -14,29 +14,37 @@ public class UserServiceTest {
 		UserDao dao = new UserDao();
 		
 		UserService userService = new UserService();
-//		Mail mail = new Mail();
-//		mail.setMessage("Hii");
-//		mail.setSubject("Greetings");
-		
-//		User user = new User();
-//		user.setUserEmail("Pawan@gmail.com");
-//		user.setUserName("Pawan");
-//		user.setUserPassword("1234");
-//		user.setAdmin(false);
+////		Mail mail = new Mail();
+////		mail.setMessage("Hii");
+////		mail.setSubject("Greetings");
 //		
-//		dao.save(user);
+////		User user = new User();
+////		user.setUserEmail("Pawan@gmail.com");
+////		user.setUserName("Pawan");
+////		user.setUserPassword("1234");
+////		user.setAdmin(false);
+////		
+////		dao.save(user);
+////		
+////		User user2 = new User();
+////		user2.setUserEmail("Samruddhi@gmail.com");
+////		user2.setUserName("Samruddhi");
+////		user2.setUserPassword("123");
+////		user2.setAdmin(false);
+////		dao.save(user2);
 //		
-//		User user2 = new User();
-//		user2.setUserEmail("Samruddhi@gmail.com");
-//		user2.setUserName("Samruddhi");
-//		user2.setUserPassword("123");
-//		user2.setAdmin(false);
-//		dao.save(user2);
+////		Mail mail = new Mail();
+////		mail.setMessage("Good Evening!!!!");
+////		mail.setSubject("Nothing");
+////		userService.sendMail(mail, 1, 2);
+	}
+	
+	@Test
+	public void markImp_test() {
+		UserDao dao = new UserDao();
+		UserService userService = new UserService();
 		
-		Mail mail = new Mail();
-		mail.setMessage("I am Fine!!");
-		mail.setSubject("Reply");
-		userService.sendMail(mail, 2, 3);
+		userService.markImpMail(5);
 	}
 	
 }
